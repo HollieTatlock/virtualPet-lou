@@ -27,3 +27,11 @@ describe("grows my pet up by 1 year", () => {
   });
 
 });
+
+describe("As the pet grows up, it beocmes hungrier and less fit", () => {
+  const pet = new Pet("Louie")
+  pet.growUp()
+  expect(pet.age).toEqual(1);
+  expect(pet.hunger).toEqual(5);
+  expect(pet.fitness).toEqual(7);
+});
