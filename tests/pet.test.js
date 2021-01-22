@@ -19,7 +19,7 @@ describe("constructor", () => {
 
 });
 
-describe("grows my pet up by 1 year", () => {
+describe("Grow Up", () => {
   it("increases the age of the pet by 1", () => {
     const pet = new Pet("Louie")
     pet.growUp()
@@ -28,10 +28,23 @@ describe("grows my pet up by 1 year", () => {
 
 });
 
-describe("As the pet grows up, it beocmes hungrier and less fit", () => {
+describe("Grow up get hungier and less fitter", () => {
+  it("increases ages and hunger, but decreases fitness", () => {
   const pet = new Pet("Louie")
   pet.growUp()
   expect(pet.age).toEqual(1);
   expect(pet.hunger).toEqual(5);
   expect(pet.fitness).toEqual(7);
 });
+});
+
+describe("Walking your pet", () => {
+  it("increases its fitness levels by 4 when 'walk' is passed but no more than 10", () => {
+  const pet = new Pet("Louie");
+  pet.fitness = 7;
+  pet.walk();
+
+  expect(pet.fitness).toEqual(10);
+});
+});
+
